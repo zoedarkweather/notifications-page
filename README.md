@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/zoedarkweather/notifications-page](https://github.com/zoedarkweather/notifications-page)
+- Live Site URL: [https://notifications-page-bice-seven.vercel.app/](https://notifications-page-bice-seven.vercel.app/)
 
 ## My process
 
