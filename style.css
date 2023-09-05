@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: "Plus Jakarta Sans";
+    --font-wt-bold: 800;
+    --font-wt-normal: 500;
+
+    --dot: hsl(1, 90%, 64%);
+    --hover-color: hsl(219, 85%, 26%);
+    --link-color: hsl(219, 12%, 42%);
+    --link-to-profile-color:  hsl(224, 21%, 14%);
+    --link-to-group-color:hsl(219, 85%, 26%);
+    --bg-light:  hsl(210, 60%, 98%);;
+    --bg-very-light: hsl(0, 0%, 100%);
+    --bg-medium: hsl(211, 68%, 94%);  
+    --bg-dark: hsl(219, 85%, 26%);
+    --border-light: hsl(205, 33%, 90%);
+    --border-medium: hsl(211, 68%, 94%);  
+    --light-text: hsl(0, 0%, 100%);
+    --medium-text: hsl(219, 14%, 63%); 
+    --dark-text: hsl(219, 12%, 42%);;
+}
+
+/* general  */
+body {
+    font-size: 16px;
+    font-family: var(--main-font);
+    font-weight: var(--font-wt-normal);
+    background-color: var(--bg-very-light);
+}
+
+img {
+    display: block;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+a {
+    font-weight: var(--font-wt-bold);
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover,    
+a:active,
+a:focus {
+    color: var(--hover-color);
+}
+
+.main-container {
+    background-color: var(--bg-very-light);
+}
+
+/* header  */
+header {
+    margin: 1rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.new-notifications {
+    padding: 0.2rem 0.5rem;
+    width: 2rem;
+    text-align: center;
+    background-color: var(--bg-dark);
+    color: var(--light-text);
+    border-radius: 0.2rem;
+}
+
+.btn-mark-read {
+    cursor: pointer;
+    width: 8rem;
+    height: 2rem;
+    background: var(--bg-main);
+    border: none;
+}
+
+.btn-mark-read:hover,
+.btn-mark-read:active,
+.btn-mark-read:focus {
+    color: var(--hover-color);
+}
+
+/* main  */
+.notification {
+    margin: 1rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: minmax(auto, 5rem) 4fr auto;
+}
+
+.notification-body {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.notification-time {
+    color: var(--medium-text);
+}
+
+.avatar {
+    width: 3rem;
+    justify-self: start;
+    grid-row: 1 / span 2;
+    grid-column: 1;
+}
+
+.profile-link {
+    color: var(--link-to-profile-color);
+}
+
+.group-link {
+    color: var(--link-to-group-color);
+}
+
+.commented-img {
+    box-sizing: content-box;
+    cursor: pointer;
+    width: 3rem;
+    grid-row: 1;
+    grid-column: 3;
+    justify-self: start;
+}
+
+.commented-img:hover {
+    border: 5px solid var(--border-medium);
+    border-radius: 0.5rem;
+}
+
+.dm-preview {
+    cursor: pointer;
+    margin-top: 0.7rem;
+    padding: 1rem;   
+    border: 1px solid var(--border-light);
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.dm-preview:hover {
+    background-color: var(--bg-medium);
+
+}
+
+.new {
+    background-color: var(--bg-light);
+}
+
+.new .dot:before {
+    content:"•";
+    color: var(--dot);
+    font-size: 1.5rem;
+}
+
+/* footer */
+.attribution {
+    margin-top: 2rem;
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width:600px) {
+    body {
+        background-color: var(--bg-light);
+    }
+
+    .main-container {
+        width: 90%;
+        margin: 2rem auto;
+        padding: 1rem;
+        border-radius: 0.7rem;
+    }
+
+    header {
+        grid-template-columns: 1fr 1fr 2fr;
+        justify-items: start;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn-mark-read {
+        justify-self: end;
+    }
+}
+
+@media (min-width:900px) {
+    .main-container {
+        max-width: 680px;
+    }
+}
